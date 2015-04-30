@@ -1,0 +1,10 @@
+	Jam Entry
+1.05
+	Team Name
+CoolTeam
+	Entry Name
+CoolGame
+	Entry Identifier
+420
+	Scenes Needed:
+Jam
