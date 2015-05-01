@@ -6,7 +6,7 @@ public class GameIdentifiers : MonoBehaviour {
 
 	public float time;
 	private Text timeText;
-	private CycleManager cycleManager;
+	//private CycleManager cycleManager;
 	public GameObject health;
 	//public Health1 health1;
 	//private Health _health1;
@@ -15,7 +15,7 @@ public class GameIdentifiers : MonoBehaviour {
 	void Start()
 	{
 		timeText = this.GetComponent<Text>();
-		cycleManager = CycleManager.Instance;
+	//	cycleManager = CycleManager.Instance;
 	
 		health = GameObject.Find("health");
 
@@ -31,8 +31,8 @@ public class GameIdentifiers : MonoBehaviour {
 		//int test = Player;
 		//_health1 = Player.GetComponent<Health>();
 		timeText.text =" First: " + (health.transform.position.x).ToString() + "Second: " + cycleManager.SecondDigit + "Third: " + cycleManager.ThirdDigit + "Fourth: " + cycleManager.FourthDigit;
-		if (Input.GetKeyDown ("space"))
-			cycleManager.AdjustTimeLeft (10f);
+		//if (Input.GetKeyDown ("space"))
+		//	cycleManager.AdjustTimeLeft (10f);
 
 	}
 }
