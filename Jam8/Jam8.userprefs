@@ -1,8 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\GameIdentifiers.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Explosions\Scripts\MuzzleFlashAnimate.js">
     <Files>
+      <File FileName="Assets\Explosions\Scripts\MuzzleFlashAnimate.js" Line="7" Column="33" />
       <File FileName="Assets\Scripts\GameIdentifiers.cs" Line="38" Column="2" />
+      <File FileName="Assets\Scripts\Health.js" Line="29" Column="22" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -30,7 +30,7 @@ public class GameIdentifiers : MonoBehaviour {
 		//Player.GetComponent<he
 		//int test = Player;
 		//_health1 = Player.GetComponent<Health>();
-		timeText.text =" First: " + (health.transform.position.x).ToString() + "Second: " + cycleManager.SecondDigit + "Third: " + cycleManager.ThirdDigit + "Fourth: " + cycleManager.FourthDigit;
+		//timeText.text =" First: " + (health.transform.position.x).ToString() + "Second: " + cycleManager.SecondDigit + "Third: " + cycleManager.ThirdDigit + "Fourth: " + cycleManager.FourthDigit;
 		//if (Input.GetKeyDown ("space"))
 		//	cycleManager.AdjustTimeLeft (10f);
 
