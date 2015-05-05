@@ -8,7 +8,17 @@ class FreeMovementMotor extends MovementMotor {
 	public var walkingSpeed : float = 5.0;
 	public var walkingSnappyness : float = 50;
 	public var turningSmoothing : float = 0.3;
+
+	private var hasChanged : boolean = false;
+	private var commonGameObject : GameObject;
 	
+	function Start()
+	{
+        
+	    commonGameObject = GameObject.Find("gameData");
+
+	}
+
 	function FixedUpdate () {
 		// Handle the movement of the character
 		var targetVelocity : Vector3 = movementDirection * walkingSpeed;
@@ -30,6 +40,18 @@ class FreeMovementMotor extends MovementMotor {
 			var rotationAngle : float = AngleAroundAxis (transform.forward, faceDir, Vector3.up);
 			rigidbody.angularVelocity = (Vector3.up * rotationAngle * turningSmoothing);
 		}
+
+		if(hasChanged == false)
+		{
+			if(gameObject.tag == "Player")
+			{		
+				ChangeSpeed();
+			}
+			 
+		    hasChanged = true;
+
+		}
+        
 	}
 	
 	// The angle between dirA and dirB around axis
@@ -44,5 +66,12 @@ class FreeMovementMotor extends MovementMotor {
 	    // Return angle multiplied with 1 or -1
 	    return angle * (Vector3.Dot (axis, Vector3.Cross (dirA, dirB)) < 0 ? -1 : 1);
 	}
+
+	    function ChangeSpeed()
+	    {
+            
+	        walkingSpeed = commonGameObject.transform.position.z + 5.0;
+
+	    }
 	
 }

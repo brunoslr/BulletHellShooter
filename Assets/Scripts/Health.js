@@ -1,5 +1,3 @@
-
-
 public var maxHealth : float = 100.0;
 public var health : float = 100.0;
 public var regenerateSpeed : float = 0.0;
@@ -10,7 +8,7 @@ public var damagePrefab : GameObject;
 public var damageEffectTransform : Transform;
 public var damageEffectMultiplier : float = 1.0;
 public var damageEffectCentered : boolean = true;
-public var health1 : GameObject;
+public var playerHealth : GameObject;
 public var scorchMarkPrefab : GameObject = null;
 private var scorchMark : GameObject = null;
 
@@ -25,8 +23,8 @@ private var colliderRadiusHeuristic : float = 1.0;
 
 function Awake () {
 	enabled = false;
-	health1 = GameObject.Find("health");
-	health1.transform.position.x = 100;
+	playerHealth = GameObject.Find("gameData");
+	playerHealth.transform.position.x = 100;
 	if (damagePrefab) {
 		if (damageEffectTransform == null)
 			damageEffectTransform = transform;
@@ -75,7 +73,7 @@ function OnDamage (amount : float, fromDirection : Vector3) {
 		amount *= 10.0;
 	#endif
 	*/
-
+	
 	health -= amount;
 	damageSignals.SendSignals (this);
 	lastDamageTime = Time.time;
@@ -104,7 +102,12 @@ function OnDamage (amount : float, fromDirection : Vector3) {
 	if (health <= 0)
 	{
 		//GameScore.RegisterDeath (gameObject);
-
+		
+	if(gameObject.tag != "Player")
+		{		
+			playerHealth.transform.position.y += 1;
+		}
+			
 		health = 0;
 		dead = true;
 		dieSignals.SendSignals (this);
@@ -122,8 +125,10 @@ function OnDamage (amount : float, fromDirection : Vector3) {
 			scorchMark.transform.eulerAngles.y = Random.Range (0.0, 90.0);
 		}
 	}
-	health1.transform.position.x = health;
-	
+	if(gameObject.tag == "Player")
+	{		
+		playerHealth.transform.position.x = health;
+	}
 }
 
 function OnEnable () {
