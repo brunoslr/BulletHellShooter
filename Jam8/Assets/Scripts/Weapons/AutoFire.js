@@ -10,11 +10,13 @@ var firing : boolean = false;
 var damagePerSecond : float = 20.0;
 var forcePerSecond : float = 20.0;
 var hitSoundVolume : float = 0.5;
-
+var distance : float = 0.0;
 var muzzleFlashFront : GameObject;
 
 private var lastFireTime : float = -1;
 private var raycast : PerFrameRaycast;
+
+public var clicked = false;
 
 function Awake () {
 	muzzleFlashFront.SetActive (false);
@@ -25,6 +27,7 @@ function Awake () {
 }
 
 function Update () {
+
 	if (firing) {
 
 		if (Time.time > lastFireTime + 1 / frequency) {
@@ -37,7 +40,11 @@ function Update () {
 
 			// Find the object hit by the raycast
 			var hitInfo : RaycastHit = raycast.GetHitInfo ();
-			if (hitInfo.transform) {
+			
+			distance = Vector3.Distance(hitInfo.transform.position,this.transform.position);
+			Debug.Log(distance);
+			
+			if (hitInfo.transform && distance < 5) {
 				// Get the health component of the target if any
 				var targetHealth : Health = hitInfo.transform.GetComponent.<Health> ();
 				if (targetHealth) {
@@ -57,13 +64,16 @@ function Update () {
 				AudioSource.PlayClipAtPoint (sound, hitInfo.point, hitSoundVolume);
 
 				bullet.dist = hitInfo.distance;
+
+				OnStopFire();
 			}
 			else {
-				bullet.dist = 1000;
+				bullet.dist = 1;
 			}
 		}
 	}
 }
+
 
 function OnStartFire () {
 	if (Time.timeScale == 0)
@@ -71,6 +81,8 @@ function OnStartFire () {
 
 	firing = true;
 
+	Debug.Log("firing");
+	
 	muzzleFlashFront.SetActive (true);
 
 	if (audio)
@@ -81,6 +93,8 @@ function OnStopFire () {
 	firing = false;
 
 	muzzleFlashFront.SetActive (false);
+
+	Debug.Log("Not firing");
 
 	if (audio)
 		audio.Stop ();

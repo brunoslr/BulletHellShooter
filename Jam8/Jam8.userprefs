@@ -1,10 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Explosions\Scripts\MuzzleFlashAnimate.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Weapons\AutoFire.js">
     <Files>
-      <File FileName="Assets\Explosions\Scripts\MuzzleFlashAnimate.js" Line="7" Column="33" />
-      <File FileName="Assets\Scripts\GameIdentifiers.cs" Line="38" Column="2" />
-      <File FileName="Assets\Scripts\Health.js" Line="29" Column="22" />
+      <File FileName="Assets\Scripts\Weapons\FlameLife.cs" Line="8" Column="1" />
+      <File FileName="Assets\Scripts\Movement\FreeMovementMotor.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\GameIdentifiers.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\Weapons\AutoFire.js" Line="52" Column="79" />
+      <File FileName="Assets\Scripts\Weapons\SimpleBullet.js" Line="12" Column="11" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
