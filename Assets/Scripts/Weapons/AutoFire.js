@@ -11,6 +11,7 @@ var damagePerSecond : float = 20.0;
 var forcePerSecond : float = 20.0;
 var hitSoundVolume : float = 0.5;
 var distance : float = 0.0;
+public var bulletRange : float = 20.0;
 var muzzleFlashFront : GameObject;
 
 private var lastFireTime : float = -1;
@@ -18,12 +19,23 @@ private var raycast : PerFrameRaycast;
 
 public var clicked = false;
 
+private var commonGameObject : GameObject;
+
+function Start()
+{
+        
+    commonGameObject = GameObject.Find("gameData");
+	ChangeSpeed();
+}
+
 function Awake () {
 	muzzleFlashFront.SetActive (false);
 
 	raycast = GetComponent.<PerFrameRaycast> ();
 	if (spawnPoint == null)
 		spawnPoint = transform;
+		
+
 }
 
 function Update () {
@@ -42,9 +54,9 @@ function Update () {
 			var hitInfo : RaycastHit = raycast.GetHitInfo ();
 			
 			distance = Vector3.Distance(hitInfo.transform.position,this.transform.position);
-			Debug.Log(distance);
+			//Debug.Log(distance);
 			
-			if (hitInfo.transform && distance < 15) {
+			if (hitInfo.transform && distance < bulletRange) {
 				// Get the health component of the target if any
 				var targetHealth : Health = hitInfo.transform.GetComponent.<Health> ();
 				if (targetHealth) {
@@ -81,7 +93,7 @@ function OnStartFire () {
 
 	firing = true;
 
-	Debug.Log("firing");
+	//Debug.Log("firing");
 	
 	muzzleFlashFront.SetActive (true);
 
@@ -94,8 +106,17 @@ function OnStopFire () {
 
 	muzzleFlashFront.SetActive (false);
 
-	Debug.Log("Not firing");
+	//Debug.Log("Not firing");
 
 	if (audio)
 		audio.Stop ();
+}
+
+function ChangeSpeed()
+{
+    frequency = 0.0;
+    frequency = commonGameObject.transform.localScale.z + 5.0;
+    if(frequency <= 5)
+        frequency = 5;
+
 }

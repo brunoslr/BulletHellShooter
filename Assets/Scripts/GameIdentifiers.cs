@@ -26,9 +26,9 @@ public class GameIdentifiers : MonoBehaviour {
 		
 		gameTextBack = GameObject.Find("BackText").GetComponent<Text>();
 		
-		gameOverText = GameObject.Find("GameOverFrontText").GetComponent<Text>();
+//		gameOverText = GameObject.Find("GameOverFrontText").GetComponent<Text>();
 		
-		gameOverTextBack = GameObject.Find("GameOverBackText").GetComponent<Text>();
+//		gameOverTextBack = GameObject.Find("GameOverBackText").GetComponent<Text>();
 		
 		creditsPanel = GameObject.Find("Panel");
 		
@@ -53,7 +53,7 @@ public class GameIdentifiers : MonoBehaviour {
 		setFireSpeed(9);
 		
 		//Start in one of the predetermined positions according the third Digit
-		resolveStartingPosition(9);
+		//resolveStartingPosition(9);
 		
 		//If greather than or equal 5, night time else, day time
 		resolveLightEffects(9);
@@ -82,7 +82,7 @@ public class GameIdentifiers : MonoBehaviour {
 			health = commonGameObject.transform.position.x;
 			
 			gameText.text = " Player Health " + (commonGameObject.transform.position.x).ToString ("#.#") + 
-				"\n Enemies Alive: " + countActiveEnemies ();
+				"\n Enemies Killed: " + enemiesKilled;
 			gameTextBack.text = gameText.text;
 			
 			if (countActiveEnemies () == 0) //Kill all the enemies go to next lvl with full bonus
@@ -116,11 +116,11 @@ public class GameIdentifiers : MonoBehaviour {
 	IEnumerator GameOver(float time)
 	{
 		activateCreditsPanel (true);
-	//	setCycleManagerEndGame ((int)enemiesKilled, countActiveEnemies(), (int)health,cycleManager.ThirdDigit + 5);
-		gameOverText.text = //"The next level will start with the indicators "+ cycleManager.FirstDigit + 
-			//cycleManager.SecondDigit + cycleManager.ThirdDigit + cycleManager.FourthDigit +
-				" Enemies Destroyed this round: " + enemiesKilled;
-		gameOverTextBack.text = gameOverText.text;
+//	//	setCycleManagerEndGame ((int)enemiesKilled, countActiveEnemies(), (int)health,cycleManager.ThirdDigit + 5);
+//		gameOverText.text = //"The next level will start with the indicators "+ cycleManager.FirstDigit + 
+//			//cycleManager.SecondDigit + cycleManager.ThirdDigit + cycleManager.FourthDigit +
+//				" Enemies Destroyed this round: " + enemiesKilled;
+//		gameOverTextBack.text = gameOverText.text;
 		yield return new WaitForSeconds (time);
 		
 		//cycleManager.AdvanceToNext();
@@ -208,7 +208,6 @@ public class GameIdentifiers : MonoBehaviour {
 			player.transform.position = new Vector3(141,1,143);
 			break;
 		default:
-			player.transform.position = new Vector3(134,1,129);
 			break;
 			
 		}
