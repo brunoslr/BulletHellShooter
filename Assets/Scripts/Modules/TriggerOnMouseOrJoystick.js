@@ -40,12 +40,12 @@ function Update () {
 			state = false;
 		}
 	#else
-		if (state == false && Input.GetMouseButtonDown (0)) {
+		if (state == false && Input.GetMouseButtonDown (1)) {
 			mouseDownSignals.SendSignals (this);
 			state = true;
 		}
 		
-		else if (state == true && Input.GetMouseButtonUp (0)) {
+		else if (state == true && Input.GetMouseButtonUp (1)) {
 			mouseUpSignals.SendSignals (this);
 			state = false;
 		}
