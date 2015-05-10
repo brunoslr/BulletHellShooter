@@ -21,8 +21,7 @@ function OnEnable () {
 }
 
 function OnTriggerEnter (other : Collider) {
-//if (other.transform == player && CanSeePlayer ()) {
-	if (other.transform) {
+	if (other.transform == player && CanSeePlayer ()) {
 		OnSpotted ();
 	}
 }

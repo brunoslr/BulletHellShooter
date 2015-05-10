@@ -5,7 +5,7 @@ public var mouseUpSignals : SignalSender;
 
 private var state : boolean = false;
 
-#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_BLACKBERRY
+#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_WP_8_1 || UNITY_BLACKBERRY || UNITY_TIZEN
 private var joysticks : Joystick[];
 
 function Start () {
@@ -14,15 +14,19 @@ function Start () {
 #endif
 
 function Update () {
-#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_BLACKBERRY
-	if (state == false && joysticks[0].tapCount > 0) {
-		mouseDownSignals.SendSignals (this);
-		state = true;
+#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_WP_8_1 || UNITY_BLACKBERRY || UNITY_TIZEN
+	
+	if(!GLOBAL.isJSConnected)
+	{
+		if (state == false && joysticks[0].tapCount > 0) {
+			mouseDownSignals.SendSignals (this);
+			state = true;
+		}
+		else if (joysticks[0].tapCount <= 0) {
+			mouseUpSignals.SendSignals (this);
+			state = false;
+		}	
 	}
-	else if (joysticks[0].tapCount <= 0) {
-		mouseUpSignals.SendSignals (this);
-		state = false;
-	}	
 #else	
 	#if !UNITY_EDITOR && (UNITY_XBOX360 || UNITY_PS3)
 		// On consoles use the right trigger to fire

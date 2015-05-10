@@ -92,10 +92,21 @@ private function AutoDetectQuality ()
 			break;
 		}
 
-	#elif UNITY_ANDROID || UNITY_WP8
+	#elif UNITY_ANDROID || UNITY_TIZEN
 
 		currentQuality = Quality.Low;
-		
+	
+	#elif UNITY_WP8 || UNITY_WP_8_1
+
+		if (SystemInfo.systemMemorySize > 512)
+		{
+			currentQuality = Quality.Medium;
+		}
+		else
+		{
+			currentQuality = Quality.Low;
+		}
+
 	#elif UNITY_BLACKBERRY
 	
 		currentQuality = Quality.Medium;
@@ -125,7 +136,7 @@ private function AutoDetectQuality ()
 			" (" + iPhone.generation + " class iOS)"
 		#elif UNITY_ANDROID
 			" (Android)"
-		#elif UNITY_WP8
+		#elif UNITY_WP8 || UNITY_WP_8_1
 			" (Windows Phone)"
 		#elif UNITY_BLACKBERRY
 			" (Blackberry)"

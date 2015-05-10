@@ -4,7 +4,7 @@
 var thisMesh : Mesh;
 var uvs : Vector2[];
 
-#if !UNITY_IPHONE && !UNITY_ANDROID && !UNITY_WP8 && !UNITY_BLACKBERRY
+#if !UNITY_IPHONE && !UNITY_ANDROID && !UNITY_WP8 && !UNITY_BLACKBERRY && !UNITY_TIZEN
 
 function Start () 
 {
