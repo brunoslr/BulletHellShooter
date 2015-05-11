@@ -45,7 +45,7 @@ public class GameIdentifiers : MonoBehaviour {
 		activateCreditsPanel (false);
 		
 		//Set the player speed according to the First Digit
-		setPlayerSpeed(9);
+		setPlayerSpeed(5);
 		
 		//Starting time = (secondDigit - 5) X2
 		resolveStartingTime(9);
