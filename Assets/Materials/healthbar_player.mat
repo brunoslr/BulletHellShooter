@@ -24,7 +24,7 @@ Material:
       data:
         first:
           name: _SelfIllumination
-        second: 3.75
+        second: 4.25
       data:
         first:
           name: _InvFade
