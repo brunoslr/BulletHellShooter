@@ -120,7 +120,7 @@ function Update () {
 				var targetHealth : Health = hitInfo.transform.GetComponent.<Health> ();
 				if (targetHealth) {
 					// Apply damage
-					targetHealth.OnDamage (damagePerSecond / frequency, -flameSpawnPoint.forward);
+					targetHealth.OnDamage (damagePerSecond*4.0f / frequency, -flameSpawnPoint.forward);
 				}
 
 				// Get the rigidbody if any
