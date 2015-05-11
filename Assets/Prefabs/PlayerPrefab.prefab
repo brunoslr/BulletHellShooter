@@ -384,7 +384,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 423086}
   m_Layer: 0
-  m_Name: BulletSpawn
+  m_Name: FlameSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -934,6 +934,37 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &127510
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 427510}
+  m_Layer: 0
+  m_Name: BulletSpawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &133740
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 433740}
+  - 108: {fileID: 10887068}
+  m_Layer: 0
+  m_Name: Point light
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &423038
 Transform:
   m_ObjectHideFlags: 1
@@ -953,8 +984,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123040}
-  m_LocalRotation: {x: 6.39473541e-08, y: .0386465862, z: -5.71394416e-08, w: .999252975}
-  m_LocalPosition: {x: 98.7200012, y: 1, z: 47.1100006}
+  m_LocalRotation: {x: 8.56223821e-08, y: .653310716, z: -4.79480144e-09, w: .757089972}
+  m_LocalPosition: {x: 170.940002, y: 1, z: 124.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 423092}
@@ -1063,9 +1094,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: -.129999444}
   m_LocalScale: {x: 2.10165548, y: 2.10165286, z: 2.10165501}
   m_Children:
-  - {fileID: 423086}
+  - {fileID: 427510}
   - {fileID: 423138}
   - {fileID: 423140}
+  - {fileID: 423086}
   m_Father: {fileID: 423112}
   m_RootOrder: 0
 --- !u!4 &423058
@@ -1258,12 +1290,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 123086}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.00763506582, y: .169548258, z: 1.61314857}
+  m_LocalRotation: {x: .707106829, y: -1.88313933e-07, z: 1.88313933e-07, w: .707106829}
+  m_LocalPosition: {x: -.00763381738, y: .169547826, z: 1.61315084}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 423056}
-  m_RootOrder: 0
+  m_RootOrder: 3
 --- !u!4 &423088
 Transform:
   m_ObjectHideFlags: 1
@@ -1623,6 +1655,7 @@ Transform:
   - {fileID: 423094}
   - {fileID: 423134}
   - {fileID: 423078}
+  - {fileID: 433740}
   m_Father: {fileID: 423040}
   m_RootOrder: 4
 --- !u!4 &423144
@@ -1713,6 +1746,30 @@ Transform:
   - {fileID: 423116}
   m_Father: {fileID: 423136}
   m_RootOrder: 0
+--- !u!4 &427510
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127510}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.00763506582, y: .169548258, z: 1.61314857}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 423056}
+  m_RootOrder: 0
+--- !u!4 &433740
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 423142}
+  m_RootOrder: 3
 --- !u!23 &2323148
 Renderer:
   m_ObjectHideFlags: 1
@@ -2087,6 +2144,41 @@ Light:
   m_ShadowAngle: 0
   m_IndirectIntensity: 1
   m_AreaSize: {x: 1, y: 1}
+--- !u!108 &10887068
+Light:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 133740}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: .180000007
+  m_Range: 75
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
 --- !u!111 &11123156
 Animation:
   m_ObjectHideFlags: 1
@@ -2235,14 +2327,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 100000, guid: 647e7d9f49e834c51991c6bd76163b2b, type: 2}
-  spawnPoint: {fileID: 423086}
+  flamePrefab: {fileID: 198522, guid: 8483470199fb4a04aabf92e6e7e3157c, type: 2}
+  bulletSpawnPoint: {fileID: 427510}
+  flameSpawnPoint: {fileID: 423086}
   frequency: 10
   coneAngle: 1.5
   firing: 0
-  damagePerSecond: 30
+  damagePerSecond: 50
   forcePerSecond: 20
   hitSoundVolume: .25
   distance: 0
+  bulletRange: 20
   muzzleFlashFront: {fileID: 123140}
   clicked: 0
 --- !u!114 &11423142

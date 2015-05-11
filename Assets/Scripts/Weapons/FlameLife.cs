@@ -5,7 +5,7 @@ public class FlameLife : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Invoke ("delete", 2.0f);
+		Invoke ("delete", 1.0f);
 	}
 	
 	// Update is called once per frame
