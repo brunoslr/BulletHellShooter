@@ -54,7 +54,7 @@ function Awake () {
 	
 	initOffsetToPlayer = mainCameraTransform.position - character.position;
 	
-	#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_BLACKBERRY
+	#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_WP_8_1 || UNITY_BLACKBERRY || UNITY_TIZEN
 		if (joystickPrefab) {
 			// Create left joystick
 			var joystickLeftGO : GameObject = Instantiate (joystickPrefab) as GameObject;
@@ -83,7 +83,7 @@ function Awake () {
 }
 
 function Start () {
-	#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_BLACKBERRY
+	#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_WP_8_1 || UNITY_BLACKBERRY || UNITY_TIZEN
 		// Move to right side of screen
 		var guiTex : GUITexture = joystickRightGO.GetComponent.<GUITexture> ();
 		guiTex.pixelInset.x = Screen.width - guiTex.pixelInset.x - guiTex.pixelInset.width;			
@@ -112,14 +112,85 @@ function OnEnable () {
 		joystickRight.enabled = true;
 }
 
+private var button8Down : boolean = false;
+private var button9Down : boolean = false;
+private var moveF : int;
+private var moveB : int;
+
+function OnGUI()
+{
+	//GUI.Label(new Rect(10,10,100,25),"8: "+moveF+" ("+button8Down+")");
+	//GUI.Label(new Rect(10,40,100,25),"9: "+moveB+" ("+button9Down+")");
+	//GUI.Label(new Rect(10,70,140,25),"JS Connected: "+GLOBAL.isJSConnected);
+}
+
 function Update () {
 	// HANDLE CHARACTER MOVEMENT DIRECTION
-	#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_BLACKBERRY
+
+	if(GLOBAL.isJSConnected)
+	{
+		if(Input.GetButtonDown("Joystick button 8"))
+		{
+			button8Down = true;
+		}
+
+		if(Input.GetButtonUp("Joystick button 8"))
+		{
+			button8Down = false;
+		}
+
+		if(Input.GetButtonDown("Joystick button 9"))
+		{
+			button9Down = true;
+		}
+
+		if(Input.GetButtonUp("Joystick button 9"))
+		{
+			button9Down = false;
+		}
+
+		// Inverted logic might be more comfortable
+		if(!button8Down)
+		{
+			moveF = 1;
+		}
+		else
+		{
+			moveF = 0;
+		}
+
+		if(button9Down)
+		{
+			moveB = 1;
+		}
+		else
+		{
+			moveB = 0;
+		}
+	}
+
+	#if UNITY_ANDROID || UNITY_WP8 || UNITY_WP_8_1 || UNITY_BLACKBERRY || UNITY_TIZEN
 		motor.movementDirection = joystickLeft.position.x * screenMovementRight + joystickLeft.position.y * screenMovementForward;
+	#elif UNITY_IPHONE
+		if(GLOBAL.isJSConnected)
+		{
+			if (GLOBAL.isJSExtended)
+				motor.movementDirection = Input.GetAxis("Horizontal") * screenMovementRight + Input.GetAxis("Vertical") * screenMovementForward;
+			else
+				motor.movementDirection = -moveB * (motor.facingDirection*2) + moveF * (motor.facingDirection*2);
+		}
+		else
+		{
+			motor.movementDirection = joystickLeft.position.x * screenMovementRight + joystickLeft.position.y * screenMovementForward;
+		}
+
 	#else
 		motor.movementDirection = Input.GetAxis ("Horizontal") * screenMovementRight + Input.GetAxis ("Vertical") * screenMovementForward;
 	#endif
-	
+		
+		//Debug.Log("H:"+Input.GetAxis ("Horizontal"));
+		//Debug.Log("3rd:"+Input.GetAxis ("3rdAxis"));
+		//Debug.Log("J3rd:"+Input.GetAxis ("Joystick 3rdAxis"));
 	// Make sure the direction vector doesn't exceed a length of 1
 	// so the character can't move faster diagonally than horizontally or vertically
 	if (motor.movementDirection.sqrMagnitude > 1)
@@ -144,7 +215,7 @@ function Update () {
 	
 	var cameraAdjustmentVector : Vector3 = Vector3.zero;
 	
-	#if UNITY_IPHONE || UNITY_ANDROID || UNITY_WP8 || UNITY_BLACKBERRY
+	#if UNITY_ANDROID || UNITY_WP8 || UNITY_WP_8_1 || UNITY_BLACKBERRY || UNITY_TIZEN
 	
 		// On mobiles, use the thumb stick and convert it into screen movement space
 		motor.facingDirection = joystickRight.position.x * screenMovementRight + joystickRight.position.y * screenMovementForward;
@@ -153,14 +224,33 @@ function Update () {
 	
 	#else
 	
-		#if !UNITY_EDITOR && (UNITY_XBOX360 || UNITY_PS3)
-
+		//#if !UNITY_EDITOR && (UNITY_XBOX360 || UNITY_PS3 || UNITY_IPHONE)
+		#if (UNITY_XBOX360 || UNITY_PS3 || UNITY_IPHONE)
 			// On consoles use the analog sticks
-			var axisX : float = Input.GetAxis("LookHorizontal");
-			var axisY : float = Input.GetAxis("LookVertical");
-			motor.facingDirection = axisX * screenMovementRight + axisY * screenMovementForward;
-	
-			cameraAdjustmentVector = motor.facingDirection;		
+			var axisX : float;
+			var axisY : float;
+
+			if(GLOBAL.isJSConnected)
+			{
+				if (GLOBAL.isJSExtended)
+				{
+					axisX = Input.GetAxis("RightHorizontal");
+					axisY = Input.GetAxis("RightVertical");
+					motor.facingDirection = axisX * screenMovementRight + axisY * screenMovementForward;
+					//cameraAdjustmentVector = motor.facingDirection;
+				}
+				else
+				{
+					axisX = Input.GetAxis("Horizontal");
+					axisY = Input.GetAxis("Vertical");
+					motor.facingDirection = axisX * screenMovementRight + axisY * screenMovementForward;
+				}
+			}
+			else
+			{
+				motor.facingDirection = joystickRight.position.x * screenMovementRight + joystickRight.position.y * screenMovementForward;
+				cameraAdjustmentVector = motor.facingDirection;
+			}		
 		
 		#else
 	

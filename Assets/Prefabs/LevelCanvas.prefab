@@ -98,22 +98,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &149886
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 449874}
-  - 114: {fileID: 11449882}
-  m_Layer: 0
-  m_Name: gameData
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &149888
 GameObject:
   m_ObjectHideFlags: 0
@@ -128,7 +112,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &149890
 GameObject:
   m_ObjectHideFlags: 0
@@ -296,18 +280,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &449874
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149886}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -251, y: -296.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 22449896}
-  m_RootOrder: 4
 --- !u!114 &11449874
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -413,19 +385,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "DEVELOPERS:\nARMAAN BHARGAVA\nBRUNO ROCHA\nZACH WHITMAN\n\nSOURCES -> UNITY
-    ASSET STORE:\nANGRY BOTS, \nQS-GRASS2-PACK."
---- !u!114 &11449882
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149886}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c7ed9dccbb2efb4590da8a286d1867a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  m_Text: "SOURCES -> UNITY ASSET STORE:\nANGRY BOTS, \nQS-GRASS2-PACK.\nBarrels -
+    Gabro Media\r\nPallet with Objects - Unity Technologies\r\nDesert Sandbox LITE
+    - Aquarius Max\n\nTextures\nFree Stock Textures - Walls\r\nCzech It Experts -
+    Sand Texture"
 --- !u!114 &11449884
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -649,8 +612,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "DEVELOPERS:\nARMAAN BHARGAVA\nBRUNO ROCHA\nZACH WHITMAN\n\nSOURCES -> UNITY
-    ASSET STORE:\nANGRY BOTS, \nQS-GRASS2-PACK."
+  m_Text: "SOURCES -> UNITY ASSET STORE:\nANGRY BOTS, \nQS-GRASS2-PACK.\nBarrels -
+    Gabro Media\r\nPallet with Objects - Unity Technologies\r\nDesert Sandbox LITE
+    - Aquarius Max\n\nTextures\nFree Stock Textures - Walls\r\nCzech It Experts -
+    Sand Texture"
 --- !u!222 &22249874
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -947,7 +912,6 @@ RectTransform:
   - {fileID: 22449882}
   - {fileID: 22449888}
   - {fileID: 22449886}
-  - {fileID: 449874}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_AnchorMin: {x: 0, y: 0}

@@ -23,8 +23,11 @@ private var colliderRadiusHeuristic : float = 1.0;
 
 function Awake () {
 	enabled = false;
-	playerHealth = GameObject.Find("gameData");
-	playerHealth.transform.position.x = 100;
+	
+		playerHealth = GameObject.Find("gameData");
+		if(gameObject.tag == "Player"){
+			playerHealth.transform.position.x = 100;
+		}
 	if (damagePrefab) {
 		if (damageEffectTransform == null)
 			damageEffectTransform = transform;
@@ -112,7 +115,10 @@ function OnDamage (amount : float, fromDirection : Vector3) {
 		dead = true;
 		dieSignals.SendSignals (this);
 		enabled = false;
-
+		if(gameObject.tag == "Player")
+		{	
+			Application.LoadLevel(Application.loadedLevel);
+		}
 		// scorch marks
 		if (scorchMark) {
 			scorchMark.SetActive (true);

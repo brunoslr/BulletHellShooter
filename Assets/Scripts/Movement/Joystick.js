@@ -30,7 +30,7 @@ private var guiBoundary : Boundary = Boundary ();			// Boundary for joystick gra
 private var guiTouchOffset : Vector2;						// Offset to apply to touch input
 private var guiCenter : Vector2;							// Center of joystick
 
-#if !UNITY_IPHONE && !UNITY_ANDROID && !UNITY_WP8 && !UNITY_BLACKBERRY
+#if !UNITY_IPHONE && !UNITY_ANDROID && !UNITY_WP8 && !UNITY_WP_8_1 && !UNITY_BLACKBERRY && !UNITY_TIZEN
 
 function Awake () {
 	gameObject.SetActive (false);

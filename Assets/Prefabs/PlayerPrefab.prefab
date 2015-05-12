@@ -965,6 +965,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &144014
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 444014}
+  - 114: {fileID: 11444014}
+  m_Layer: 0
+  m_Name: SpeechBubble
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &423038
 Transform:
   m_ObjectHideFlags: 1
@@ -1656,6 +1672,7 @@ Transform:
   - {fileID: 423134}
   - {fileID: 423078}
   - {fileID: 433740}
+  - {fileID: 444014}
   m_Father: {fileID: 423040}
   m_RootOrder: 4
 --- !u!4 &423144
@@ -1770,6 +1787,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 423142}
   m_RootOrder: 3
+--- !u!4 &444014
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144014}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 423142}
+  m_RootOrder: 4
 --- !u!23 &2323148
 Renderer:
   m_ObjectHideFlags: 1
@@ -2498,6 +2527,24 @@ MonoBehaviour:
       action: OnFootstep
       delay: 0
   animationComponent: {fileID: 11123156}
+--- !u!114 &11444014
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 144014}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c33d3792b226cfb4193966ecbb1d2a05, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bubbleWidth: 200
+  bubbleHeight: 100
+  offsetX: 0
+  offsetY: 150
+  speechBubble: {fileID: 144014}
+  mat: {fileID: 2100000, guid: 1abc99d22cf9f7d438b8409badc85668, type: 2}
+  guiSkin: {fileID: 11400000, guid: 9f33556ed15707342b6b9407570ebf8e, type: 2}
 --- !u!120 &12023156
 LineRenderer:
   m_ObjectHideFlags: 1
