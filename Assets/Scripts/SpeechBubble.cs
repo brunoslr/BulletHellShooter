@@ -87,8 +87,8 @@ public class SpeechBubble : MonoBehaviour
 			GUI.Label(new Rect(0,0,200,100),"",guiSkin.customStyles[0]);
 			
 			//Render the text
-			GUI.Label(new Rect(10,25,190,50),"I am going to kill them all !!" +
-				"...I should not forget to find the artifacts though!!",guiSkin.label);
+			GUI.Label(new Rect(10,25,190,50),"I need to find the artifacts !!" +
+				"... Rumour has it the orange portal goes to a secret room..." ,guiSkin.label);
 		
 				
 		GUI.EndGroup();
