@@ -172,7 +172,7 @@ public class GameIdentifiers : MonoBehaviour {
 			if(enemy[i]!=null && enemy[i].activeSelf==true)
 				activeEnemies++;
 		}
-		Debug.Log ("Checking"+activeEnemies);
+		//Debug.Log ("Checking"+activeEnemies);
 		return activeEnemies;
 	}
 	

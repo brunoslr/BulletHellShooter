@@ -2242,7 +2242,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 6
+  walkingSpeed: 7.5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!114 &11423130

@@ -712,7 +712,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100052}
   m_LocalRotation: {x: 0, y: -.999921203, z: 0, w: .0125552947}
-  m_LocalPosition: {x: -7.99693966, y: .0238334537, z: -91.5730438}
+  m_LocalPosition: {x: 103.989502, y: 30.9927788, z: 109.505447}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400054}
@@ -1543,12 +1543,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motor: {fileID: 11400006}
   head: {fileID: 400014}
-  targetDistanceMin: 3
-  targetDistanceMax: 4
+  targetDistanceMin: 1
+  targetDistanceMax: 2
   weaponBehaviours:
   - {fileID: 11400000}
   - {fileID: 11400014}
-  fireFrequency: 2
+  fireFrequency: .5
 --- !u!1002 &11400009
 EditorExtensionImpl:
   serializedVersion: 6

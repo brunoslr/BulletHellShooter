@@ -52,7 +52,7 @@ function Awake () {
 function Start () {
 	
 	
-	Debug.Log(health);
+	//Debug.Log(health);
 			
 }
 
