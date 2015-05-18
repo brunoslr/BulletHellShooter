@@ -32,7 +32,7 @@ public class MainMenu : MonoBehaviour {
     private IEnumerator LoadMainLevel() 
     {
         yield return new WaitForSeconds(0.5f);
-        Application.LoadLevel ("level2");
+        Application.LoadLevel ("level1");
     }
 
 	private IEnumerator LoadLevel1() 
