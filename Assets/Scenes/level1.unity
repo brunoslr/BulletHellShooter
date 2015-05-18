@@ -230,12 +230,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motor: {fileID: 2017256465}
   head: {fileID: 854053082}
-  targetDistanceMin: 3
-  targetDistanceMax: 4
+  targetDistanceMin: 1
+  targetDistanceMax: 2
   weaponBehaviours:
   - {fileID: 746012107}
   - {fileID: 973016396}
-  fireFrequency: 2
+  fireFrequency: .5
 --- !u!1 &8334459
 GameObject:
   m_ObjectHideFlags: 0
@@ -2997,12 +2997,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motor: {fileID: 1973252960}
   head: {fileID: 1048624410}
-  targetDistanceMin: 3
-  targetDistanceMax: 4
+  targetDistanceMin: 1
+  targetDistanceMax: 2
   weaponBehaviours:
   - {fileID: 1994403615}
   - {fileID: 306983850}
-  fireFrequency: 2
+  fireFrequency: .5
 --- !u!4 &107254747
 Transform:
   m_ObjectHideFlags: 0
@@ -3995,7 +3995,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &144068391
@@ -7802,7 +7802,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &250755032
@@ -10314,7 +10314,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &345322041
@@ -11357,7 +11357,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!54 &370696687
@@ -13025,7 +13025,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 13623156, guid: 6396275b7bceedb48be757606810702c, type: 2}
       propertyPath: m_IsTrigger
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6396275b7bceedb48be757606810702c, type: 2}
@@ -13913,7 +13913,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &460980628
@@ -14306,7 +14306,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!54 &464192206
@@ -15002,7 +15002,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &493360750
@@ -16460,7 +16460,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!114 &537586272
@@ -19350,7 +19350,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &654704302
@@ -21094,7 +21094,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!114 &711099757
@@ -22310,7 +22310,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &732481356
@@ -22698,7 +22698,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &739611379
@@ -24898,7 +24898,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!114 &821192304
@@ -30752,7 +30752,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 6
+  walkingSpeed: 7.5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!54 &1044672399
@@ -30779,7 +30779,7 @@ CapsuleCollider:
   m_PrefabInternal: {fileID: 429112620}
   m_GameObject: {fileID: 1044672391}
   m_Material: {fileID: 13400000, guid: d35b37e7667d34205b83e85449b6d6a4, type: 2}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .550000012
   m_Height: 2
@@ -32187,7 +32187,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!114 &1081358191
@@ -32472,7 +32472,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!114 &1082056269
@@ -36191,12 +36191,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motor: {fileID: 1522921463}
   head: {fileID: 518440714}
-  targetDistanceMin: 3
-  targetDistanceMax: 4
+  targetDistanceMin: 1
+  targetDistanceMax: 2
   weaponBehaviours:
   - {fileID: 1579817789}
   - {fileID: 1700561387}
-  fireFrequency: 2
+  fireFrequency: .5
 --- !u!1 &1190736935
 GameObject:
   m_ObjectHideFlags: 0
@@ -38377,12 +38377,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motor: {fileID: 1174842291}
   head: {fileID: 117594172}
-  targetDistanceMin: 3
-  targetDistanceMax: 4
+  targetDistanceMin: 1
+  targetDistanceMax: 2
   weaponBehaviours:
   - {fileID: 532963683}
   - {fileID: 1236729880}
-  fireFrequency: 2
+  fireFrequency: .5
 --- !u!1 &1284775137
 GameObject:
   m_ObjectHideFlags: 0
@@ -39906,12 +39906,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motor: {fileID: 1208338076}
   head: {fileID: 1000112602}
-  targetDistanceMin: 3
-  targetDistanceMax: 4
+  targetDistanceMin: 1
+  targetDistanceMax: 2
   weaponBehaviours:
   - {fileID: 1026548790}
   - {fileID: 1168150620}
-  fireFrequency: 2
+  fireFrequency: .5
 --- !u!1 &1334659722
 GameObject:
   m_ObjectHideFlags: 0
@@ -40161,7 +40161,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!114 &1344350479
@@ -42183,12 +42183,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motor: {fileID: 246016602}
   head: {fileID: 1913901048}
-  targetDistanceMin: 3
-  targetDistanceMax: 4
+  targetDistanceMin: 1
+  targetDistanceMax: 2
   weaponBehaviours:
   - {fileID: 212618468}
   - {fileID: 498864390}
-  fireFrequency: 2
+  fireFrequency: .5
 --- !u!1 &1411854769
 GameObject:
   m_ObjectHideFlags: 0
@@ -44036,7 +44036,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &1513355612
@@ -44386,7 +44386,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!54 &1518543151
@@ -48682,7 +48682,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!114 &1667142284
@@ -48962,7 +48962,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!114 &1676146925
@@ -51866,7 +51866,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!114 &1788612486
@@ -52087,7 +52087,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!114 &1789635633
@@ -52976,7 +52976,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!114 &1813344661
@@ -53850,12 +53850,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   motor: {fileID: 47252611}
   head: {fileID: 2089928549}
-  targetDistanceMin: 3
-  targetDistanceMax: 4
+  targetDistanceMin: 1
+  targetDistanceMax: 2
   weaponBehaviours:
   - {fileID: 248374820}
   - {fileID: 1408758197}
-  fireFrequency: 2
+  fireFrequency: .5
 --- !u!4 &1849125072
 Transform:
   m_ObjectHideFlags: 0
@@ -56783,7 +56783,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &1948699122
@@ -57712,7 +57712,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &1975788491
@@ -58600,7 +58600,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &2000320768
@@ -59898,7 +59898,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!54 &2030043898
@@ -60643,7 +60643,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!54 &2045397726
@@ -61423,7 +61423,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &2077431243
@@ -62320,7 +62320,7 @@ MonoBehaviour:
   movementDirection: {x: 0, y: 0, z: 0}
   movementTarget: {x: 0, y: 0, z: 0}
   facingDirection: {x: 0, y: 0, z: 0}
-  walkingSpeed: 8
+  walkingSpeed: 5
   walkingSnappyness: 50
   turningSmoothing: .300000012
 --- !u!82 &2116991845

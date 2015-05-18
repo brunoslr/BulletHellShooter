@@ -54,7 +54,7 @@ public class GameIdentifiers : MonoBehaviour {
 				"\n Enemies Killed: " + enemiesKilled;
 			gameTextBack.text = gameText.text;
 			
-			if (countActiveEnemies () == 0) //Kill all the enemies go to next lvl with full bonus
+			if (countActiveEnemies () <= 10) //Kill all the enemies go to next lvl with full bonus
 			{
 				allEnemiesKilled = true;
 
